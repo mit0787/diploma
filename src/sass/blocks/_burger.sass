@@ -1,0 +1,75 @@
+.burger
+  &__menu
+    display: none
+    z-index: 10
+    position: relative
+    padding: 0
+    font-size: 14px
+    background: none
+    border: none
+    color: #ffffff
+    text-transform: uppercase
+    text-shadow: 1px 1px 2px black
+    span
+      margin-left: 10px
+    &:focus
+      outline-style: none
+  &__cross
+    display: none
+    z-index: 10
+    position: relative
+    top: -22px
+    left: 188px
+    padding: 0
+    background: none
+    border: none
+    font-size: 40px
+    outline-style: none
+    &_active
+      display: block
+  &-nav
+    position: fixed
+    top: 24px
+    width: 70%
+  &-list
+    position: absolute
+    height: 363px
+    top: -388px
+    padding: 0
+    padding-top: 70px
+    margin: 0
+    list-style: none
+    background-color: #fff
+    opacity: 0
+    transition: 0.2s
+    &_active
+      opacity: 0.9
+      top: -30px
+  &__item
+    display: block
+    padding: 15px 20px
+    color: $text-c
+    text-decoration: none
+    border-bottom: 1px solid #efefef
+@media (max-width: 1200px)
+  .burger
+    &__menu
+      display: block
+      transition: 0.2s
+      &_active
+        padding-left: 20px
+        text-shadow: none
+        color: $text-c
+        z-index: 10
+@media (max-width: 991px)
+  .burger
+    &__menu
+      &_active
+        padding-left: 0
+    &-wrap
+      padding: 0 20px
+    &-list
+      margin-left: -20px
+    &__cross
+      left: 168px
+      

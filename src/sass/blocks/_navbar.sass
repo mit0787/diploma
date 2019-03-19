@@ -1,0 +1,61 @@
+.navbar
+  position: fixed
+  z-index: 20
+  top: 0
+  width: 100%
+  height: 55px
+  background-color: #fff
+  opacity: 0.9
+  box-shadow: 0 21px 21px rgba(0, 0, 0, 0.28)
+  &-block
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__list
+    display: flex
+    list-style: none
+    justify-content: space-between
+    padding: 0
+  &__item
+    margin-right: 37px
+    a
+      font-size: 14px
+      color: $text-c
+      text-decoration: underline #bfbfbf
+      transition: 0.2s
+      &:hover
+        text-decoration: underline $second-c
+  &__contacts
+    text-align: right
+    a
+      display: block
+      transition: 0.2s
+      &:hover
+        text-decoration: underline $second-c
+  &__phone
+    +bold
+    text-decoration: none
+    color: $text-c
+    font-size: 17px
+    font-weight: 700
+  &__link
+    color: $second-c
+    text-decoration: underline #c8eeef
+    font-size: 14px
+@media (max-width: 1200px)
+  .navbar
+    position: absolute
+    z-index: 0
+    background: none
+    box-shadow: none
+    &__item
+      display: none
+    &__phone
+      color: #ffffff
+      margin-top: 24px
+      margin-bottom: 9px
+    &__link
+      text-decoration: underline
+@media (max-width: 991px)
+  .navbar
+    padding: 0 20px

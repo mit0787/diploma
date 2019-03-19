@@ -1,0 +1,128 @@
+.models
+  padding-bottom: 32px
+.cards
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+.models
+  text-align: center
+  &__title
+    margin: 0
+    margin-bottom: 62px
+    font-size: 36px
+  &__subtitle
+    display: block
+    margin-bottom: 76px
+    font-size: 20px
+  &__card
+    width: 370px
+    height: 680px
+    padding: 29px 35px 40px
+    margin-bottom: 30px
+.card
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  &__title
+    margin: 0
+    font-size: 20px
+  &__image
+    position: relative
+    max-width: 300px
+    margin-top: -10px
+    filter: grayscale(100%)
+    transition: 0.5s
+    img
+      display: block
+      width: 100%
+      object-fit: cover
+      height: 220px
+  &__list
+    margin: 0
+    padding: 0
+    height: 224px
+    list-style: none
+  &__text
+    margin-bottom: 8px
+    width: 240px
+  &:last-child
+    .card__text
+      line-height: 1.32
+  &:not(:last-child)
+    .card__text::after
+      content: ''
+      display: block
+      position: relative
+      left: 50%
+      margin-left: -4px
+      margin-top: 7px
+      width: 9px
+      height: 2px
+      background-color: $second-c
+  &__button
+    margin: 0
+    padding: 20px 24px
+    color: $text-c
+    font-size: 13px
+    letter-spacing: 0.6px
+    background: #fff
+    border: 1px solid #efefef
+  &:hover
+    box-shadow: 0 5px 32px rgba(0, 0, 0, 0.1)
+    .card__image
+      filter: none
+    .card__button
+      color: #ffffff
+      border: 1px solid $second-c
+      background-color: $second-c
+      &:hover
+        background-color: lighten($second-c, 10%)
+@media (max-width: 1200px)
+  .models
+    padding-bottom: 0
+    &__title
+      margin-bottom: 20px
+    &__subtitle
+      margin-bottom: 20px
+@media (max-width: 768px)
+  .models
+    &__title
+      font-size: 28px
+    &__subtitle
+      font-size: 17px
+      width: 300px
+      margin: auto
+  .cards
+    flex-direction: column
+    align-items: center
+  .card
+    &__title
+      font-size: 17px
+@media (max-width: 576px)
+  .models
+    &__title
+      font-size: 24px
+    &__subtitle
+      font-size: 14px
+      width: 250px
+  .card
+    width: 320px
+    height: 520px
+    padding: 15px 20px 15px
+    &__title
+      font-size: 15px
+    &__list
+      height: 160px
+    &__text
+      width: 180px
+      font-size: 12px
+      margin-bottom: 4px
+    &__image
+      max-width: 280px
+      img
+        height: 205px
+    &:not(:last-child)
+      .card__text::after
+        margin-top: 3px
+        background-color: $second-c

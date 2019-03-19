@@ -1,0 +1,141 @@
+.hero
+  padding: 165px 0 100px 0
+  background-color: $bg-c
+  background-image: url(../img/hero/hero-bg.png) 
+  background-repeat: no-repeat
+  color: #ffffff
+  &-block
+    display: flex
+    justify-content: space-between
+  &__logo
+    display: none
+  &__text
+    flex-basis: 50%
+  &__title
+    font-size: 48px
+    line-height: 60px
+    font-weight: 300
+    margin: 0
+    margin-bottom: 32px
+  &__subtitle
+    display: block
+    font-size: 20px
+    font-weight: 300
+    margin-bottom: 60px
+  &-list
+    list-style: none
+    font-size: 15px
+    padding: 0
+    margin: 0
+    &__icon
+      display: inline-block
+      width: 35px
+      height: 35px
+      margin-right: 22px
+      border: 1px solid #343536
+      border-radius: 50%
+      text-align: center
+      line-height: 35px
+      img
+        max-width: 19px
+        vertical-align: middle
+        margin-top: -5px
+    &__text
+      display: inline-block
+      max-width: 153px
+      vertical-align: middle
+    &__item
+      &:not(:last-child)
+        margin-bottom: 20px
+      &:nth-child(3)
+        .hero-list__text
+          max-width: 210px
+  &-form
+    max-width: 370px
+    margin-top: 13px
+    background-color: #fff
+    &__title
+      margin: 0
+      margin-bottom: 26px
+      font-size: 18px
+      font-weight: 400
+      line-height: 21px
+      span
+        font-weight: 700
+  &__input
+    display: block
+@media (max-width: 1200px)
+  .hero
+    padding: 130px 0 75px 0
+    &__logo
+      display: block
+      position: absolute
+      top: 45px
+      font-size: 11px
+      font-weight: 300
+      text-transform: uppercase
+    &__title
+      font-size: 38px
+      line-height: 50px
+    &__subtitle
+      margin-bottom: 50px
+@media (max-width: 991px)
+  .hero
+    padding: 100px 20px
+    &__title
+      font-size: 30px
+      line-height: 40px
+    &__subtitle
+      font-size: 17px
+@media (max-width: 768px)
+  .hero
+    background: $bg-c
+    &-block
+      flex-direction: column
+      align-items: center
+    &__text
+      max-width: 405px
+    &__title,
+    &__subtitle
+      text-align: center
+    &-list
+      display: flex
+      flex-direction: column
+      align-items: center
+      &__item
+        width: 275px
+    &-form
+      margin-top: 50px
+@media (max-width: 576px)
+  .hero
+    &__logo
+      display: none
+    &__text
+      max-width: 255px
+    &__title
+      font-size: 24px
+      line-height: 28px
+      margin-bottom: 28px
+    &__subtitle
+      font-size: 14px
+      margin-bottom: 28px
+    &-list
+      display: flex
+      flex-direction: column
+      align-items: center
+      &__item
+        width: 235px
+        &:not(:last-child)
+          margin-bottom: 12px
+          &:nth-child(3)
+            .hero-list__text
+              max-width: 170px
+      &__text
+        font-size: 12px
+        max-width: 122px
+    &-form
+      max-width: 255px
+      padding: 30px 25px
+      &__title
+        font-size: 15px
+        margin-bottom: 18px

@@ -10,17 +10,243 @@
 </head>
 
 <body>
-  <header>
+  <!-- блок навигации -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-block">
+        <!-- /.navbar-menu -->
+        <ul class="navbar__list">
+          <li class="navbar__item"><a href="#hero">Главная</a></li>
+          <!-- /.navbar__item -->
+          <li class="navbar__item"><a href="#models">Виды макетов</a></li>
+          <!-- /.navbar__item -->
+          <li class="navbar__item"><a href="#">Комплектация макетов</a></li>
+          <!-- /.navbar__item -->
+          <li class="navbar__item"><a href="#">Реализованные проекты</a></li>
+          <!-- /.navbar__item -->
+          <li class="navbar__item"><a href="#">Наши клиенты</a></li>
+          <!-- /.navbar__item -->
+          <li class="navbar__item"><a href="#">Контакты</a></li>
+          <!-- /.navbar__item -->
+        </ul>
+        <!-- /.navbar__list -->
+        <div class="navbar__contacts">
+          <a href="tel:8(800)891-33-33" class="navbar__phone">8 800 891-33-33</a>
+          <!-- /.navbar__phone -->
+          <a href="#" class="navbar__link">Заказать обратный звонок</a>
+          <!-- /.navbar__link -->
+        </div>
+        <!-- /.navbar__contacts -->
+      </div>
+      <!-- /.navbar-block -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <!-- /.navbar -->
 
+  <header class="hero" id="hero">
+    <div class="container">
+      <span class="hero__logo">Макетная мастерская</span>
+      <div class="hero-block">
+        <div class="hero__text">
+          <h1 class="hero__title">Изготовление макетов любой сложности</h1>
+          <!-- /.hero__title -->
+          <span class="hero__subtitle">Продажи. Инвестиции. Имидж.</span>
+          <!-- /.hero__subtitle -->
+          <ul class="hero-list">
+            <li class="hero-list__item">
+              <span class="hero-list__icon">5</span>
+              <span class="hero-list__text">Срок производства от 5 дней</span>
+            </li>
+            <li class="hero-list__item">
+              <span class="hero-list__icon">24</span>
+              <span class="hero-list__text">Гарантия на макеты 24 месяца</span>
+            </li>
+            <li class="hero-list__item">
+              <span class="hero-list__icon"><img src="./img/hero/reload.svg" alt="reload"></span>
+              <span class="hero-list__text">Проектируем, изготавливаем, доставляем и устанавливаем</span>
+            </li>
+            <li class="hero-list__item">
+              <span class="hero-list__icon"><img src="./img/hero/map-location.svg" alt="map"></span>
+              <span class="hero-list__text">Застрахуем, доставим и установим</span>
+            </li>
+          </ul>
+          <!-- /.hero__list -->
+        </div>
+        <!-- /.hero__text -->
+        <div class="form hero-form">
+          <h3 class="form__title hero-form__title">Оставьте заявку и получите расчет стоимость макета<br>
+            в течение <span>30 минут</span></h3>
+          <form class="input-block" action="#" id="hero-form">
+            <input type="text" name="username" class="input hero__input user" placeholder="Ваше имя">
+            <input type="tel" name="phone" class="input hero__input phone" placeholder="Контактный телефон">
+            <input type="email" name="email" class="input hero__input email" placeholder="Электронная почта">
+            <button class="button brif__button">Оставить заявку</button>
+          </form>
+        </div>
+        <!-- /.form hero__form -->
+      </div>
+      <!-- /.hero-block -->
+    </div>
+    <!-- /.container -->
   </header>
 
   <main>
-
+    <!-- блок с моделями -->
+    <section class="section models" id="models">
+      <div class="container">
+        <h2 class="models__title">Виды макетов</h2>
+        <!-- /.models__title -->
+        <span class="models__subtitle">Создаем макеты от небольших домов до космических станций</span>
+        <!-- /.models__subtitle -->
+        <div class="cards">
+          <div class="card models__card">
+            <h4 class="card__title">Архитектурные макеты</h4>
+            <!-- /.card__title -->
+            <div class="card__image"><img src="./img/models/apartments.jpg" alt=""></div>
+            <!-- /.card__image -->
+            <ul class="card__list">
+              <li class="card__text">Многоэтажные дома</li>
+              <li class="card__text">Жилые комплексы</li>
+              <li class="card__text">Коттеджные поселки</li>
+              <li class="card__text">Торговые комплексы</li>
+              <li class="card__text">Бизнес – парки</li>
+              <li class="card__text">Административные здания</li>
+              <li class="card__text">Гостиницы и санатории</li>
+            </ul>
+            <!-- /.card_list -->
+            <button class="button card__button">Рассчитать стоимость</button>
+            <!-- /.button card__button -->
+          </div>
+          <!-- /.card models__card -->
+          <div class="card models__card">
+            <h4 class="card__title">Градостроительные макеты</h4>
+            <!-- /.card__title -->
+            <div class="card__image"><img src="./img/models/park.jpg" alt=""></div>
+            <!-- /.card__image -->
+            <ul class="card__list">
+              <li class="card__text">Области</li>
+              <li class="card__text">Города</li>
+              <li class="card__text">Районы</li>
+              <li class="card__text">Микрорайоны</li>
+              <li class="card__text">Территории</li>
+              <li class="card__text">Мосты и тоннели</li>
+            </ul>
+            <!-- /.card_list -->
+            <button class="button card__button">Рассчитать стоимость</button>
+            <!-- /.button card__button -->
+          </div>
+          <!-- /.card models__card -->
+          <div class="card models__card">
+            <h4 class="card__title">Промышленные макеты</h4>
+            <!-- /.card__title -->
+            <div class="card__image"><img src="./img/models/factory.png" alt=""></div>
+            <!-- /.card__image -->
+            <ul class="card__list">
+              <li class="card__text">Предприятия и фабрики</li>
+              <li class="card__text">Энергетические объекты</li>
+              <li class="card__text">Заводы</li>
+              <li class="card__text">Научные центры</li>
+              <li class="card__text">Трубопроводы</li>
+              <li class="card__text">Производственные линии</li>
+              <li class="card__text">Технологические линии</li>
+            </ul>
+            <!-- /.card_list -->
+            <button class="button card__button">Рассчитать стоимость</button>
+            <!-- /.button card__button -->
+          </div>
+          <!-- /.card models__card -->
+          <div class="card models__card">
+            <h4 class="card__title">Интерьерные макеты</h4>
+            <!-- /.card__title -->
+            <div class="card__image"><img src="./img/models/cabin.jpg" alt=""></div>
+            <!-- /.card__image -->
+            <ul class="card__list">
+              <li class="card__text">Квартиры</li>
+              <li class="card__text">Офисы</li>
+              <li class="card__text">Коттеджи</li>
+              <li class="card__text">Магазины</li>
+              <li class="card__text">Спортивные комплексы</li>
+              <li class="card__text">Торговые центры</li>
+              <li class="card__text">Заводы</li>
+            </ul>
+            <!-- /.card_list -->
+            <button class="button card__button">Рассчитать стоимость</button>
+            <!-- /.button card__button -->
+          </div>
+          <!-- /.card models__card -->
+          <div class="card models__card">
+            <h4 class="card__title">Ландшафтные макеты</h4>
+            <!-- /.card__title -->
+            <div class="card__image"><img src="./img/models/landscape.jpg" alt=""></div>
+            <!-- /.card__image -->
+            <ul class="card__list">
+              <li class="card__text">Парки</li>
+              <li class="card__text">Сады</li>
+              <li class="card__text">Горы</li>
+              <li class="card__text">Озера</li>
+              <li class="card__text">Рельефы местности</li>
+              <li class="card__text">Участки</li>
+            </ul>
+            <!-- /.card_list -->
+            <button class="button card__button">Рассчитать стоимость</button>
+            <!-- /.button card__button -->
+          </div>
+          <!-- /.card models__card -->
+          <div class="card models__card">
+            <h4 class="card__title">Индивидуальные макеты</h4>
+            <!-- /.card__title -->
+            <div class="card__image"><img src="./img/models/spacecraft.jpg" alt=""></div>
+            <!-- /.card__image -->
+            <ul class="card__list">
+              <li class="card__text">Мы может воплотить в жизнь любые идеи, с применением высоких технологий, максимальной детализацией<br>
+              и совершенно любых размеров</li>
+            </ul>
+            <!-- /.card_list -->
+            <button class="button card__button">Рассчитать стоимость</button>
+            <!-- /.button card__button -->
+          </div>
+          <!-- /.card models__card -->
+        </div>
+        <!-- /.cards -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section models -->
   </main>
 
   <footer>
-    
+
   </footer>
+
+  <div class="burger-wrap">
+    <div class="container">
+      <nav class="burger-nav">
+        <button class="burger__menu">&#9776;<span>Меню</span></button>
+        <button class="burger__cross">&#735;</button>
+
+        <div class="burger-list">
+          <a class="burger__item" href="#hero">Главная</a>
+          <!-- /.navbar__item -->
+          <a class="burger__item" href="#models">Виды макетов</a>
+          <!-- /.navbar__item -->
+          <a class="burger__item" href="#">Комплектация макетов</a>
+          <!-- /.navbar__item -->
+          <a class="burger__item" href="#">Реализованные проекты</a>
+          <!-- /.navbar__item -->
+          <a class="burger__item" href="#">Наши клиенты</a>
+          <!-- /.navbar__item -->
+          <a class="burger__item" href="#">Контакты</a>
+          </a>
+        </div>
+
+      </nav>
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/main.js"></script>
+
 </body>
 
 </html>
