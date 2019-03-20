@@ -1,4 +1,20 @@
 $(document).ready(function () {
+  // вызов слайдера
+  $('.portfolio__slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    prevArrow: $(".arrows__left"),
+    nextArrow: $(".arrows__right"),
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          arrows: true
+        }
+      }
+      ]
+  });
+  // выпадающее меню
   $('.burger__menu').on('click', function (e) {
     e.preventDefault();
     $(this).addClass('burger__menu_active');

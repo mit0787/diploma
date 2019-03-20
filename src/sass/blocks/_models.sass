@@ -1,5 +1,5 @@
 .models
-  padding-bottom: 32px
+  padding-bottom: 0
 .cards
   display: flex
   justify-content: space-between
@@ -24,6 +24,7 @@
   flex-direction: column
   justify-content: space-between
   align-items: center
+  transition: 0.5s
   &__title
     margin: 0
     font-size: 20px
@@ -73,11 +74,11 @@
     .card__image
       filter: none
     .card__button
-      color: #ffffff
-      border: 1px solid $second-c
-      background-color: $second-c
       &:hover
-        background-color: lighten($second-c, 10%)
+        color: #ffffff
+        border: 1px solid $second-c
+        background-color: $second-c
+        // background-color: lighten($second-c, 10%)
 @media (max-width: 1200px)
   .models
     padding-bottom: 0
