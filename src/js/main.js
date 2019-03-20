@@ -6,6 +6,37 @@ $(document).ready(function () {
     prevArrow: $(".arrows__left"),
     nextArrow: $(".arrows__right")
   });
+  $('.clients__list').slick({
+    infinite: true,
+    slidesToShow: 5,
+    prevArrow: $(".bracket__left"),
+    nextArrow: $(".bracket__right"),
+    responsive: [{
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 993,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 578,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
+  });
   // выпадающее меню
   $('.burger__menu').on('click', function (e) {
     e.preventDefault();
