@@ -4,15 +4,7 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 1,
     prevArrow: $(".arrows__left"),
-    nextArrow: $(".arrows__right"),
-    responsive: [
-      {
-        breakpoint: 900,
-        settings: {
-          arrows: true
-        }
-      }
-      ]
+    nextArrow: $(".arrows__right")
   });
   // выпадающее меню
   $('.burger__menu').on('click', function (e) {

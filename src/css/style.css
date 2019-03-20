@@ -1222,7 +1222,6 @@ body {
 }
 
 .arrows__left, .arrows__right {
-  z-index: 9;
   width: 14px;
   cursor: pointer;
   opacity: 0.5;
@@ -1230,6 +1229,12 @@ body {
 
 .arrows__left img, .arrows__right img {
   width: 100%;
+}
+
+.arrows__left {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .arrows__right {
