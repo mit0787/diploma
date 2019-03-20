@@ -1,0 +1,84 @@
+.goal
+  &s
+    padding: 99px 0 124px
+    color: #ffffff
+    background-color: $bg-c
+    background-image: url(../img/goals/goals-bg.png) 
+    background-repeat: no-repeat
+    text-align: center
+    &__title
+      max-width: 685px
+      margin: auto
+      margin-bottom: 97px
+      font-size: 24px
+      font-weight: 400
+      line-height: 31px
+    &-block
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      align-content: space-between
+      height: 375px
+  flex-basis: 23%
+  &__text
+    width: 164px
+    margin: auto
+    font-size: 15px
+    line-height: 20px
+  &:nth-child(3)
+    .goal__text
+      width: 245px
+    img
+      padding-top: 9px
+  &:nth-child(n+4):nth-child(-n+5)
+    .goal__text
+      width: 200px
+  &__image
+    height: 51px
+    margin-bottom: 36px
+@media (max-width: 1200px)
+  .goal
+    flex-basis: 33%
+    &s
+      padding: 45px 0 75px
+      &__title
+        margin-bottom: 45px
+      &-block
+        height: 465px
+@media (max-width: 991px)
+  .goal
+    &s
+      padding: 45px 20px 75px
+    flex-basis: 33%
+@media (max-width: 768px)
+  .goal
+    &s
+      background: $bg-c
+      &-block
+        height: 530px
+      &__title
+        font-size: 18px
+    flex-basis: 50%
+    &__image
+      margin-bottom: 15px
+    &__text
+      width: 140px
+      font-size: 13px
+    &:nth-child(3)
+      .goal__text
+        width: 215px
+    &:nth-child(n+4):nth-child(-n+5)
+      .goal__text
+        width: 170px
+@media (max-width: 576px)
+  .goal
+    &s
+      &-block
+        height: auto
+        flex-direction: column
+        align-content: center
+      &__title
+        font-size: 15px
+        line-height: 18px
+    &:not(:last-child)
+      margin-bottom: 30px
