@@ -29,9 +29,6 @@
     text-align: right
     a
       display: block
-      transition: 0.2s
-      &:hover
-        text-decoration: underline $second-c
   &__phone
     +bold
     text-decoration: none
@@ -42,6 +39,9 @@
     color: $second-c
     text-decoration: underline #c8eeef
     font-size: 14px
+    transition: 0.2s
+    &:hover
+      text-decoration: underline $second-c
 @media (max-width: 1200px)
   .navbar
     position: absolute

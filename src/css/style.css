@@ -401,6 +401,7 @@ body {
   padding: 17px;
   margin-bottom: 15px;
   border: 1px solid #e8e8e8;
+  font-size: 13px;
 }
 
 .input:placeholder-shown {
@@ -535,13 +536,6 @@ body {
 
 .navbar__contacts a {
   display: block;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.navbar__contacts a:hover {
-  -webkit-text-decoration: underline #23bac1;
-          text-decoration: underline #23bac1;
 }
 
 .navbar__phone {
@@ -557,6 +551,13 @@ body {
   -webkit-text-decoration: underline #c8eeef;
           text-decoration: underline #c8eeef;
   font-size: 14px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.navbar__link:hover {
+  -webkit-text-decoration: underline #23bac1;
+          text-decoration: underline #23bac1;
 }
 
 @media (max-width: 1200px) {
@@ -852,7 +853,7 @@ body {
 .burger-nav {
   position: fixed;
   top: 24px;
-  width: 70%;
+  width: 224px;
 }
 
 .burger-list {

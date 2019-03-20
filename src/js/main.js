@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // вызов слайдера
+  // настройки слайдера
   $('.portfolio__slider').slick({
     infinite: true,
     slidesToShow: 1,
@@ -54,5 +54,20 @@ $(document).ready(function () {
     $('.burger__cross').removeClass('burger__cross_active');
     $('.burger-list').removeClass('burger-list_active');
     $('.burger__menu').removeClass('burger__menu_active');
+  });
+  // плавная прокрутка
+  $("body").on('click', '[href*="#"]', function (e) {
+    var fixed_offset = 100;
+    $('html,body').stop().animate({
+      scrollTop: $(this.hash).offset().top - fixed_offset
+    }, 1000);
+    e.preventDefault();
+  });
+  // очистка плейсхолдера
+  $('input,textarea').focus(function () {
+    $(this).data('placeholder', $(this).attr('placeholder'))
+      .attr('placeholder', '');
+  }).blur(function () {
+    $(this).attr('placeholder', $(this).data('placeholder'));
   });
 });
