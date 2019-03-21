@@ -495,6 +495,12 @@ div.invalid {
     padding: 17px;
     font-size: 13px;
   }
+  div.invalid {
+    top: 30px;
+    font-size: 10px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 .navbar {
@@ -1514,6 +1520,9 @@ div.invalid {
     margin-bottom: 45px;
   }
   .goals-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 465px;
   }
 }
