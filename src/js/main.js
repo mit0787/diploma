@@ -74,21 +74,25 @@ $(document).ready(function () {
     $(this).attr('placeholder', $(this).data('placeholder'));
   });
   // модальное окно
-  $(document).ready(function () {
     var button = $(".modal-link");
     var modal = $("#modal");
     var close = $("#close");
+    var success = $("#success-close")
 
     button.on("click", function () {
       modal.addClass("modal_active");
     });
 
     close.on("click", function () {
-      modal.removeClass("modal_active")
+      $("#modal").removeClass("modal_active")
     });
-  });
+
+    success.on("click", function () {
+      $(".success").removeClass("success_active")
+    });
   // валидация
   $("#hero-form").validate({
+    focusCleanup: true,
     rules: {
       username: {
         required: true,
@@ -116,7 +120,28 @@ $(document).ready(function () {
       }
     },
     errorClass: "invalid",
-    errorElement: "div"
+    errorElement: "div",
+    submitHandler: function (form) {
+      event.preventDefault();
+      $.ajax({
+        url: 'mailer/smart.php',
+        type: 'POST',
+        data: $(form).serialize(),
+        success: function (data) {
+          $('.success').addClass('success_active');
+          setTimeout(fade_out_offer, 5000);
+          $('#hero-username').val('');
+          $('#hero-phone').val('');
+          $('#hero-email').val('');
+          function fade_out_offer() {
+            $('.success').removeClass('success_active');
+          }
+        },
+        error: function (jqXHR, textStatus) {
+          console.log(jqXHR + ': ' + textStatus);
+        }
+      });
+    }
   });
   $("#modal-form").validate({
     rules: {
@@ -146,8 +171,31 @@ $(document).ready(function () {
       }
     },
     errorClass: "invalid",
-    errorElement: "div"
+    errorElement: "div",
+    submitHandler: function (form) {
+      event.preventDefault();
+      $.ajax({
+        url: 'mailer/smart.php',
+        type: 'POST',
+        data: $(form).serialize(),
+        success: function (data) {
+          $('.success').addClass('success_active');
+          setTimeout(fade_out_offer, 5000);
+          $('#modal-username').val('');
+          $('#modal-phone').val('');
+          $('#modal-email').val('');
+          $('#modal').removeClass('modal_active');
+          
+          function fade_out_offer() {
+            $('.success').removeClass('success_active');
+          }
+        },
+        error: function (jqXHR, textStatus) {
+          console.log(jqXHR + ': ' + textStatus);
+        }
+      });
+    }
   });
   // Валидация телефона
-  $(".phone").mask("8 (999) 999-999-99")
+  $("#hero-phone").mask("8 (999) 999-999-99",{autoclear: false});
 });

@@ -80,13 +80,13 @@
             в течение <span>30 минут</span></h3>
           <form class="input-block" action="#" id="hero-form">
             <div class="input-wrap">
-              <input type="text" name="username" class="input hero__input user" placeholder="Ваше имя">
+              <input type="text" name="username" class="input hero__input user" placeholder="Ваше имя" id="hero-username">
             </div>
             <div class="input-wrap">
-              <input type="tel" name="phone" class="input hero__input phone" placeholder="Контактный телефон">
+              <input type="tel" name="phone" class="input hero__input phone" placeholder="Контактный телефон" id="hero-phone" autocomplete="on">
             </div>
             <div class="input-wrap">
-              <input type="email" name="email" class="input hero__input email" placeholder="Электронная почта">
+              <input type="email" name="email" class="input hero__input email" placeholder="Электронная почта" id="hero-email">
             </div>
             <button class="button brif__button">Оставить заявку</button>
           </form>
@@ -478,7 +478,12 @@
       </nav>
     </div>
   </div>
-
+  <!-- окно благодарности -->
+  <div class="success">
+    <div class="success__title"><button class="modal-dialog__close" id="success-close">&times;</button>
+      <p>Спасибо, мы вам перезвоним!</p>
+    </div>
+  </div>
   <!-- модальное окно -->
   <div class="modal" id="modal">
     <div class="modal-dialog">
@@ -488,13 +493,13 @@
       <!-- /.modal-dialog__title -->
       <form class="input-block" action="#" id="modal-form">
         <div class="input-wrap">
-          <input type="text" name="username" class="input modal__input user" placeholder="Ваше имя">
+          <input type="text" name="username" class="input modal__input user" placeholder="Ваше имя" id="modal-username">
         </div>
         <div class="input-wrap">
-          <input type="tel" name="phone" class="input modal__input phone" placeholder="Контактный телефон">
+          <input type="tel" name="phone" class="input modal__input phone" placeholder="Контактный телефон" id="modal-phone">
         </div>
         <div class="input-wrap">
-          <input type="email" name="email" class="input modal__input email" placeholder="Электронная почта">
+          <input type="email" name="email" class="input modal__input email" placeholder="Электронная почта" id="modal-email">
         </div>
         <button class="button brif__button">Заказать звонок</button>
       </form>
