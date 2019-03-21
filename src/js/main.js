@@ -56,12 +56,15 @@ $(document).ready(function () {
     $('.burger__menu').removeClass('burger__menu_active');
   });
   // плавная прокрутка
-  $("body").on('click', '[href*="#"]', function (e) {
-    var fixed_offset = 100;
-    $('html,body').stop().animate({
-      scrollTop: $(this.hash).offset().top - fixed_offset
-    }, 1000);
-    e.preventDefault();
+  $('.go-anchor').on('click', function (event) {
+    event.preventDefault();
+    var sc = $(this).attr("href"),
+      dn = $(sc).offset().top;
+    /*
+    * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+    * dn - определяем положение блока на странице
+    */
+    $('html, body').animate({ scrollTop: dn }, 1000);
   });
   // очистка плейсхолдера
   $('input,textarea').focus(function () {
@@ -70,4 +73,81 @@ $(document).ready(function () {
   }).blur(function () {
     $(this).attr('placeholder', $(this).data('placeholder'));
   });
+  // модальное окно
+  $(document).ready(function () {
+    var button = $(".modal-link");
+    var modal = $("#modal");
+    var close = $("#close");
+
+    button.on("click", function () {
+      modal.addClass("modal_active");
+    });
+
+    close.on("click", function () {
+      modal.removeClass("modal_active")
+    });
+  });
+  // валидация
+  $("#hero-form").validate({
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      phone: "required",
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      username: {
+        required: "Заполните поле",
+        minlength: jQuery.validator.format("Длина имени не меньше {0} символов"),
+        maxlength: jQuery.validator.format("Длина имени не больше {0} символов")
+      },
+      phone: {
+        required: "Заполните поле"
+      },
+      email: {
+        required: "Заполните поле",
+        email: jQuery.validator.format("Введите корректный email")
+      }
+    },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+  $("#modal-form").validate({
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      phone: "required",
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      username: {
+        required: "Заполните поле",
+        minlength: jQuery.validator.format("Длина имени не меньше {0} символов"),
+        maxlength: jQuery.validator.format("Длина имени не больше {0} символов")
+      },
+      phone: {
+        required: "Заполните поле"
+      },
+      email: {
+        required: "Заполните поле",
+        email: jQuery.validator.format("Введите корректный email")
+      }
+    },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+  // Валидация телефона
+  $(".phone").mask("8 (999) 999-999-99")
 });
