@@ -27,7 +27,7 @@
   &:focus
       outline-style: none
 .slider
-  &-wrap
+  &-block
     display: flex
     justify-content: space-between
     align-items: center
@@ -45,6 +45,7 @@
       height: 340px
   &__text
     max-width: 406px
+    margin-left: 85px
   &__title
     margin: 0
     margin-bottom: 49px
@@ -107,6 +108,7 @@
         height: 250px
     &__text
       max-width: 300px
+      margin-left: 50px
     &__description
       height: 207px
 @media (max-width: 991px)
@@ -135,6 +137,8 @@
       text-align: center
     &__button
       margin: auto
+    &__text
+      margin-left: 0
 @media (min-width: 320px) and (max-width: 577px)
   .portfolio
     padding: 45px 20px
@@ -149,9 +153,9 @@
   .description__element
     display: none
   .slider
-    margin: auto
-    &-wrap
+    &-block
       position: relative
+      justify-content: center
     &__item
       height: 325px
     &__image
@@ -161,6 +165,8 @@
     &__title
       font-size: 15px
     &__button
+      margin: 0
+      height: 60px
       padding: 23px 58px
   .arrows
     &__left,

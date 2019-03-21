@@ -727,15 +727,10 @@ body {
     background: #010304;
   }
   .hero-block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: block;
   }
   .hero__text {
+    margin: auto;
     max-width: 405px;
   }
   .hero__title, .hero__subtitle {
@@ -757,6 +752,7 @@ body {
     width: 275px;
   }
   .hero-form {
+    margin: auto;
     margin-top: 50px;
   }
 }
@@ -858,7 +854,7 @@ body {
 
 .burger-list {
   position: absolute;
-  height: 363px;
+  height: 365px;
   top: -388px;
   padding: 0;
   padding-top: 70px;
@@ -1177,7 +1173,7 @@ body {
   outline-style: none;
 }
 
-.slider-wrap {
+.slider-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1214,6 +1210,7 @@ body {
 
 .slider__text {
   max-width: 406px;
+  margin-left: 85px;
 }
 
 .slider__title {
@@ -1313,6 +1310,7 @@ body {
   }
   .slider__text {
     max-width: 300px;
+    margin-left: 50px;
   }
   .slider__description {
     height: 207px;
@@ -1359,6 +1357,9 @@ body {
   .slider__button {
     margin: auto;
   }
+  .slider__text {
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 577px) {
@@ -1379,11 +1380,11 @@ body {
   .description__element {
     display: none;
   }
-  .slider {
-    margin: auto;
-  }
-  .slider-wrap {
+  .slider-block {
     position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .slider__item {
     height: 325px;
@@ -1398,6 +1399,8 @@ body {
     font-size: 15px;
   }
   .slider__button {
+    margin: 0;
+    height: 60px;
     padding: 23px 58px;
   }
   .arrows__left, .arrows__right {
@@ -1535,12 +1538,7 @@ body {
 @media (min-width: 320px) and (max-width: 577px) {
   .goals-block {
     height: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    display: block;
   }
   .goals__title {
     font-size: 15px;
