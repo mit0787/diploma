@@ -588,7 +588,7 @@ body {
 }
 
 .hero {
-  padding: 165px 0 100px 0;
+  padding: 165px 0 103px;
   background-color: #010304;
   background-image: url(../img/hero/hero-bg.png);
   background-repeat: no-repeat;
@@ -674,7 +674,7 @@ body {
 
 .hero-form__title {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
@@ -913,7 +913,7 @@ body {
 }
 
 .models {
-  padding-bottom: 0;
+  padding: 94px 0 1px;
 }
 
 .cards {
@@ -1164,7 +1164,7 @@ body {
 
 .portfolio__subtitle {
   display: block;
-  margin-bottom: 97px;
+  margin-bottom: 95px;
   font-size: 20px;
   font-weight: 300;
 }
@@ -1279,8 +1279,8 @@ body {
 }
 
 .arrows__right {
-  -webkit-transform-origin: 7px 13px 0;
-          transform-origin: 7px 13px 0;
+  -webkit-transform-origin: 7px 14px 0;
+          transform-origin: 7px 14px 0;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -1418,7 +1418,7 @@ body {
 }
 
 .goals {
-  padding: 99px 0 124px;
+  padding: 102px 0 124px;
   color: #ffffff;
   background-color: #010304;
   background-image: url(../img/goals/goals-bg.png);
@@ -1429,7 +1429,7 @@ body {
 .goals__title {
   max-width: 685px;
   margin: auto;
-  margin-bottom: 97px;
+  margin-bottom: 94px;
   font-size: 24px;
   font-weight: 400;
   line-height: 31px;
@@ -1469,8 +1469,12 @@ body {
 }
 
 .goal__image {
-  height: 51px;
-  margin-bottom: 36px;
+  margin-bottom: 31px;
+}
+
+.goal__image img {
+  max-width: 56px;
+  max-height: 51px;
 }
 
 @media (max-width: 1200px) {
@@ -1554,7 +1558,7 @@ body {
 
 .clients__title {
   margin: 0;
-  margin-bottom: 96px;
+  margin-bottom: 94px;
   font-size: 24px;
 }
 
@@ -1617,8 +1621,8 @@ body {
 }
 
 .bracket__right {
-  -webkit-transform-origin: 7px 13px 0;
-          transform-origin: 7px 13px 0;
+  -webkit-transform-origin: 7px 14px 0;
+          transform-origin: 7px 14px 0;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
