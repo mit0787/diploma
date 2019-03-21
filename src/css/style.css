@@ -592,6 +592,7 @@ body {
   background-color: #010304;
   background-image: url(../img/hero/hero-bg.png);
   background-repeat: no-repeat;
+  background-position: center;
   color: #ffffff;
 }
 
@@ -1426,6 +1427,7 @@ body {
   background-color: #010304;
   background-image: url(../img/goals/goals-bg.png);
   background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
 }
 
