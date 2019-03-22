@@ -1795,6 +1795,31 @@ div.invalid {
   }
 }
 
+.apology {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.apology_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.apology__text {
+  position: relative;
+  margin: auto;
+  max-width: 370px;
+  background-color: #fff;
+  padding: 40px 50px;
+  text-align: center;
+}
+
 .success {
   position: fixed;
   display: none;

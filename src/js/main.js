@@ -90,6 +90,15 @@ $(document).ready(function () {
     success.on("click", function () {
       $(".success").removeClass("success_active")
     });
+
+    $(".bad-link").on("click", function () {
+      $("#apology").addClass("apology_active")
+    });
+    
+    $("#apology-close").on("click", function () {
+      $("#apology").removeClass("apology_active")
+    });
+
   // валидация
   $("#hero-form").validate({
     focusCleanup: true,
@@ -133,6 +142,7 @@ $(document).ready(function () {
           $('#hero-username').val('');
           $('#hero-phone').val('');
           $('#hero-email').val('');
+          ym(48172315, 'reachGoal', 'submit-form');
           function fade_out_offer() {
             $('.success').removeClass('success_active');
           }
@@ -185,7 +195,7 @@ $(document).ready(function () {
           $('#modal-phone').val('');
           $('#modal-email').val('');
           $('#modal').removeClass('modal_active');
-          
+          ym(48172315, 'reachGoal', 'submit-form');
           function fade_out_offer() {
             $('.success').removeClass('success_active');
           }
